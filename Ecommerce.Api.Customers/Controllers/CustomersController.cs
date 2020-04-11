@@ -25,7 +25,7 @@ namespace Ecommerce.Api.Customers.Controllers
             var customers = await this.provider.getCustomersAsync();
             if (customers.IsSucess)
             {
-                return Ok(customers.Item2);
+                return Ok(customers.Customers);
             }
             return NotFound();
         }
